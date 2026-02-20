@@ -1,0 +1,90 @@
+:root {
+  --bg: #fffaf5;
+  --card: #ffffff;
+  --line: #d9c7b3;
+  --text: #4a2a11;
+  --muted: #7b5a3a;
+  --accent: #ea580c;
+  --good: #15803d;
+  --bad: #b91c1c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header, main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+header h1 { margin-bottom: .25rem; }
+header p { color: var(--muted); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 14px rgba(122, 74, 29, 0.08);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: .75rem;
+}
+.stat {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: .75rem;
+}
+.stat .label { display: block; color: var(--muted); font-size: .9rem; }
+.stat .value { font-weight: 700; font-size: 1.2rem; }
+.rules { margin: 0; padding-left: 1.1rem; }
+.rules li { margin-bottom: .4rem; color: #6b4d2e; }
+.note { color: var(--muted); font-size: .85rem; }
+.toolbar { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; align-items: flex-end; }
+input, select, button {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: .45rem .6rem;
+}
+button {
+  cursor: pointer;
+  background: #ea580c;
+  border-color: #c2410c;
+  color: #fff;
+}
+button:hover { background: #c2410c; }
+.table-wrap { overflow: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 1180px; }
+th, td { border-bottom: 1px solid var(--line); padding: .55rem; text-align: left; }
+th {
+  background: #fff1e6;
+  color: #5f370e;
+}
+.money.pos { color: var(--good); }
+.money.neg { color: var(--bad); }
+.small { color: var(--muted); font-size: .8rem; }
+.inline-reco {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.inline-reco button {
+  font-size: .75rem;
+  padding: .3rem .45rem;
+}
+.reco-text {
+  color: #6b3d15;
+  font-size: .78rem;
+  line-height: 1.3;
+  max-width: 220px;
+}
+
+.contract-info {
+  font-size: .78rem;
+  line-height: 1.35;
+  color: #6b3d15;
+  min-width: 240px;
+}
