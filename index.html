@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleveland Browns Cap GM Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cleveland Browns Cap GM Lab</h1>
+      <p>
+        Review contract status, model moves, and see cap impact like a GM/cap analyst.
+        <strong id="asOfLabel"></strong>
+      </p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Cap Context</h2>
+        <div class="toolbar">
+          <label>
+            Projected League Cap (editable)
+            <input type="number" id="leagueCapInput" step="100000" />
+          </label>
+          <button id="resetCapBtn" type="button">Reset cap</button>
+        </div>
+        <div id="capContext" class="stats"></div>
+        <p class="note" id="dataNote"></p>
+      </section>
+
+      <section class="card">
+        <h2>NFL Cap Rules (Tool Logic)</h2>
+        <ul class="rules" id="rulesList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Player Decision Simulator</h2>
+        <p class="note" id="playerCountNote"></p>
+        <div class="toolbar toolbar-grid">
+          <label>
+            Search
+            <input type="search" id="searchInput" placeholder="Player or position" />
+          </label>
+          <label>
+            Position
+            <select id="positionFilter"></select>
+          </label>
+          <label>
+            Sort by
+            <select id="sortSelect">
+              <option value="capHit_desc">Cap hit (high → low)</option>
+              <option value="capHit_asc">Cap hit (low → high)</option>
+              <option value="name_asc">Name (A → Z)</option>
+              <option value="name_desc">Name (Z → A)</option>
+            </select>
+          </label>
+          <button id="resetBtn" type="button">Reset decisions</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>2026 Cap Hit</th>
+                <th>Guaranteed Left (est.)</th>
+                <th>Contract Info</th>
+                <th>Action</th>
+                <th>GM Recommendation</th>
+                <th>2026 Cap Change</th>
+                <th>2026 Dead</th>
+                <th>Future Dead (all years)</th>
+              </tr>
+            </thead>
+            <tbody id="playerRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Scenario Summary</h2>
+        <div id="scenarioSummary" class="stats"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
