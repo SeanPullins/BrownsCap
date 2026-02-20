@@ -26,7 +26,9 @@
           <button id="resetCapBtn" type="button">Reset cap</button>
         </div>
         <div id="capContext" class="stats"></div>
-        <p class="note" id="dataNote"></p>
+        <p class="note">
+          Numbers are planning estimates from public trackers. This tool now includes a complete modeled player contract list for scenario modeling and always pulls all future dead-cap years into the total dead-cap output.
+        </p>
       </section>
 
       <section class="card">
@@ -37,23 +39,10 @@
       <section class="card">
         <h2>Player Decision Simulator</h2>
         <p class="note" id="playerCountNote"></p>
-        <div class="toolbar toolbar-grid">
+        <div class="toolbar">
           <label>
             Search
             <input type="search" id="searchInput" placeholder="Player or position" />
-          </label>
-          <label>
-            Position
-            <select id="positionFilter"></select>
-          </label>
-          <label>
-            Sort by
-            <select id="sortSelect">
-              <option value="capHit_desc">Cap hit (high → low)</option>
-              <option value="capHit_asc">Cap hit (low → high)</option>
-              <option value="name_asc">Name (A → Z)</option>
-              <option value="name_desc">Name (Z → A)</option>
-            </select>
           </label>
           <button id="resetBtn" type="button">Reset decisions</button>
         </div>
@@ -63,7 +52,7 @@
               <tr>
                 <th>Player</th>
                 <th>2026 Cap Hit</th>
-                <th>Guaranteed Left (est.)</th>
+                <th>Guaranteed Left</th>
                 <th>Contract Info</th>
                 <th>Action</th>
                 <th>GM Recommendation</th>
